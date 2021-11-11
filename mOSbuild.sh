@@ -19,7 +19,7 @@ fi
 if [ ! -e disk_images/mikeos.flp ]
 then
 	echo ">>> Creating new MikeOS floppy image..."
-	mkdosfs -C disk_images/mikeos.flp 1440 || exit
+	mkdosfs -C mikeos.flp 1440 || exit
 fi
 
 
@@ -38,14 +38,14 @@ cd ..
 
 echo ">>> Adding bootloader to floppy image..."
 
-dd status=noxfer conv=notrunc if=src/d.bin of=disk_images/mikeos.flp || exit
+dd status=noxfer conv=notrunc if=src/d.bin of=mikeos.flp || exit
 
 
 echo ">>> Copying MikeOS kernel..."
 
 rm -rf tmp-loop
 
-mkdir tmp-loop && mount -o loop -t vfat disk_images/mikeos.flp tmp-loop && cp src/kernel.bin tmp-loop/
+mkdir tmp-loop && mount -o loop -t vfat mikeos.flp tmp-loop && cp src/kernel.bin tmp-loop/
 
 
 echo ">>> Unmounting loopback floppy..."
