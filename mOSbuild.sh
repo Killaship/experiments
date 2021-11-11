@@ -25,7 +25,7 @@ fi
 
 echo ">>> Assembling bootloader..."
 
-nasm -O0 -w+orphan-labels -f bin -o src/boot.bin source/boot.asm || exit
+nasm -O0 -w+orphan-labels -f bin -o src/boot.bin src/boot.asm || exit
 
 
 echo ">>> Assembling MikeOS kernel..."
