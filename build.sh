@@ -5,6 +5,9 @@ if test "`whoami`" != "root" ; then
 fi
 
 git pull
-nasm -fbin src/boot.asm -o boot
-qemu-system-i386 -fda boot
+
+
 bash mOSbuild.sh
+
+
+qemu-system-i386 -fda boot
