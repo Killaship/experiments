@@ -12,5 +12,5 @@ git pull
 bash mOSbuild.sh
 
 
-qemu-system-i386 -fda boot
+qemu-system-i386 -fda mikeos.flp
 
