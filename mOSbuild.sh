@@ -7,7 +7,7 @@
 # drive (loopback mounting), in order to copy across the files
 
 # (If you need to blank the floppy image: 'mkdosfs disk_images/mikeos.flp')
-
+rm -rf tmp-loop
 
 if test "`whoami`" != "root" ; then
 	echo "You must be logged in as root to build (for loopback mounting)"
