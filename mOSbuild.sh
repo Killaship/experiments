@@ -16,7 +16,7 @@ if test "`whoami`" != "root" ; then
 fi
 
 
-if [ ! -e disk_images/mikeos.flp ]
+if [ ! -e mikeos.flp ]
 then
 	echo ">>> Creating new MikeOS floppy image..."
 	mkdosfs -C mikeos.flp 1440 || exit
