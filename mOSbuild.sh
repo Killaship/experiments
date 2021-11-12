@@ -52,4 +52,4 @@ echo ">>> Unmounting loopback floppy..."
 
 umount tmp-loop || exit
 
-rm -rf tmp-loop
+
