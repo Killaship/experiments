@@ -38,7 +38,7 @@ cd ..
 
 echo ">>> Adding bootloader to floppy image..."
 
-dd status=noxfer conv=notrunc if=src/d.bin of=mikeos.flp || exit
+dd status=noxfer conv=notrunc if=src/boot.bin of=mikeos.flp || exit
 
 
 echo ">>> Copying MikeOS kernel..."
