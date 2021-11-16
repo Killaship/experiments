@@ -1,6 +1,20 @@
 bits 16                         ; We're working at 16-bit mode here
 
+
+
 start:
+
+	cli				; Clear interrupts
+	mov ax, 0
+	mov ss, ax			; Set stack segment and pointer
+	mov sp, 0FFFFh
+	sti				; Restore interrupts
+	mov ax, 2000h			; Set all segments to match where kernel is loaded
+	mov ds, ax			; After this, we don't need to bother with
+	mov es, ax			; segments ever again, as MikeOS and its programs
+	mov fs, ax			; live entirely in 64K
+	mov gs, ax
+
 	cli                     ; Disable the interrupts
 	mov si, msg             ; SI now points to our message
 	mov ah, 0x0E            ; Indicate BIOS we're going to print chars
