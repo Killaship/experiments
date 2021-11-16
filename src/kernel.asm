@@ -1,4 +1,4 @@
-
+org 0x2000	
 bits 16                         ; We're working at 16-bit mode here
 
 start:
