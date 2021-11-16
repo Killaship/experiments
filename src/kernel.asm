@@ -14,7 +14,7 @@ cls:
 run_prgm:
 	call cls
 	xor ax, ax
-	xor bx, vx
+	xor bx, bx
 	xor cx, cx
 	xor dx, dx
 	xor si, si
