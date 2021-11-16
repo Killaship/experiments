@@ -1,4 +1,4 @@
-org 0x7C00                      ; BIOS loads our programm at this address
+
 bits 16                         ; We're working at 16-bit mode here
 
 start:
@@ -14,6 +14,4 @@ start:
 halt:	hlt                     ; CPU command to halt the execution
 msg:	db "Hello, World!", 0   ; Our actual message to print
 
-;; Magic numbers
-times 510 - ($ - $$) db 0
-dw 0xAA55
+
