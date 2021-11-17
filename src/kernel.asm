@@ -70,6 +70,6 @@ no_change:
 
 
 
-%include src/disk.asm
+%include "src/disk.asm"
 autorun_bin_file_name	db 'HELLO.BIN', 0
 
