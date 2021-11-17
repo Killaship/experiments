@@ -60,13 +60,16 @@ no_change:
 
 	mov ax, autorun_bin_file_name
 	call os_file_exists
-	jc no_autorun_bin		; Skip next three lines if AUTORUN.BIN doesn't exist
+			; Skip next three lines if AUTORUN.BIN doesn't exist
 
 	mov cx, 32768			; Otherwise load the program into RAM...
 	call os_load_file
 	jmp execute_bin_program		; ...and move on to the executing part
 	
 	
-	
-	%include src/disk.asm
+
+
+
+%include src/disk.asm
+autorun_bin_file_name	db 'HELLO.BIN', 0
 
