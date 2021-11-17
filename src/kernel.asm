@@ -1,4 +1,4 @@
-RG 0x0000
+ORG 0x0000
 
 start:
     mov ax, 0x2000             ; Mike OS'es bootloader loads us at 0x2000:0x0000
