@@ -51,7 +51,6 @@ dd status=noxfer conv=notrunc if=src/boot.bin of=mikeos.flp || exit
 
 echo ">>> Copying MikeOS kernel and programs..."
 
-rm -rf tmp-loop
 
 mkdir tmp-loop && mount -o loop -t vfat disk_images/mikeos.flp tmp-loop && cp source/kernel.bin tmp-loop/
 
@@ -66,4 +65,5 @@ echo ">>> Unmounting loopback floppy..."
 
 umount tmp-loop || exit
 
+rm -rf tmp-loop
 
