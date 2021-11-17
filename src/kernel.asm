@@ -68,7 +68,19 @@ no_change:
 	
 	
 
+execute_bin_program:
+		; Clear screen before running
 
+	mov ax, 0			; Clear all registers
+	mov bx, 0
+	mov cx, 0
+	mov dx, 0
+	mov si, 0
+	mov di, 0
+
+	call 32768			; Call the external program code,
+					; loaded at second 32K of segment
+					; (program must end with 'ret')
 
 %include "disk.asm"
 autorun_bin_file_name	db 'HELLO.BIN', 0
