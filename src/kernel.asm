@@ -1,6 +1,8 @@
 bits 16
 org 0x0000
 
+disk_buffer	equ	24576
+
 
 start:
 
