@@ -85,5 +85,6 @@ execute_bin_program:
 					; (program must end with 'ret')
 
 %include "disk.asm"
+%include "string.asm"
 autorun_bin_file_name	db 'HELLO.BIN', 0
 
