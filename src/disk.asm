@@ -9,6 +9,13 @@
 ; os_get_file_list -- Generate comma-separated string of files on floppy
 ; IN/OUT: AX = location to store zero-terminated filename string
 
+os_fatal_error:
+	hlt
+	jmp $
+
+
+
+
 os_get_file_list:
 	pusha
 
